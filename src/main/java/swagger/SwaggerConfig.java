@@ -1,11 +1,8 @@
 package swagger;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.w3c.dom.DocumentType;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -14,36 +11,33 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-@EnableWebMvc
-@EnableSwagger2
-@ComponentScan(basePackages = {"com.test.springboot"})
-@Configuration
+/**
+ * @author zh
+ * @ClassName cn.saytime.Swgger2
+ * @Description
+ * @date 2017-07-10 22:12:31
+ */
+@Configuration    // 配置注解，自动在本类上下文加载一些环境变量信息
+@EnableSwagger2   // 使swagger2生效
+@ComponentScan(basePackages = {"com.test.springboot.controller"})  //需要扫描的包路径
 public class SwaggerConfig {
+
     @Bean
-    public Docket createRestApi(){
+    public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .groupName("test")
-                .ignoredParameterTypes(HttpSession.class, Authentication.class, HttpServletRequest.class, HttpServletResponse.class)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.test.springboot"))
+                .apis(RequestHandlerSelectors.basePackage("com.test.springboot.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("spring boot test")
-                .description("这只是个测试")
-                .termsOfServiceUrl("http://www.baidu.com")
-                .license("1.0")
-                .version("3.0")
+                .title("springboot利用swagger构建api文档")
+                .description("简单优雅的restfun风格，http://blog.csdn.net/saytime")
+                .termsOfServiceUrl("http://blog.csdn.net/saytime")
+                .version("1.0")
                 .build();
-
     }
-
 }
