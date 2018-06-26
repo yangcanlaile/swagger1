@@ -18,7 +18,9 @@ public class HomeController {
     public String login(){
 
         System.out.printf("This is true3;");
-        return "test3";
+
+        return "test12";
+
 
     }
 
