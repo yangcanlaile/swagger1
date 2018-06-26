@@ -16,9 +16,20 @@ public class HomeController {
     @ApiOperation(value="登陆", notes="根据url的id来获取用户详细信息")
     @RequestMapping(value= "/home", method=RequestMethod.GET)
     public String login(){
-        return "test2";
 
+        System.out.printf("This is true;");
+        return "test1";
 
+    }
+
+    public void test(){
+
+        return ;
+    }
+
+    public void test1(){
+
+        return ;
     }
 
 }
