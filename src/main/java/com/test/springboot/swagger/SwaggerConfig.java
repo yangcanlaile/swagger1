@@ -1,4 +1,4 @@
-package swagger;
+package com.test.springboot.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
