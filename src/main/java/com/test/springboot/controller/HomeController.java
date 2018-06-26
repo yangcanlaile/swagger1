@@ -17,13 +17,19 @@ public class HomeController {
     @RequestMapping(value= "/home", method=RequestMethod.GET)
     public String login(){
 
-        System.out.printf("This is true3;");
-        return "test3";
+        System.out.printf("This is true;");
+        return "test1";
 
     }
 
-   public void test3(){
+    public void test(){
 
-   }
+        return ;
+    }
+
+    public void test1(){
+
+        return ;
+    }
 
 }
