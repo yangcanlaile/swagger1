@@ -11,9 +11,9 @@ spring:
       charset: utf-8
 mybatis:
   type-aliases-package: com.test.springboot.mapper
+  mapper-locations: classpath*:mapper/*Mapper.xml
 server:
   port: 8082
-
 
 
 #server:

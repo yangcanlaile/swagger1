@@ -1,16 +1,15 @@
-package com.test.springboot.mapper;
+package com.test.springboot.service;
 
 import com.test.springboot.bean.User;
-import org.mapstruct.Mapper;
 
-@Mapper
-public interface UserMapper {
+public interface IUserService {
+
 
     public void insert(User user);
 
     public void update(User user);
 
-    public void delete(int id);
-
     public User find(int id);
+
+    public void delete(int id);
 }

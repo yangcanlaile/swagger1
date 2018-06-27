@@ -5,60 +5,43 @@ package com.test.springboot.bean;
  */
 public class User {
 
-    private Integer id;
+    private int id;
+    private String username;
+    private String password;
+    private int age;
 
-    private String name;
+    public User(){}
 
-    private Integer age;
-
-    private String email;
-
-    public String getEmail() {
-
-        return email;
-
-    }
-
-    public void setEmail(String email) {
-
-        this.email = email;
-
-    }
-
-    public Integer getId() {
-
+    public int getId() {
         return id;
-
     }
 
-    public void setId(Integer id) {
-
-        this.id= id;
-
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getName() {
-
-        return name;
-
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-
-        this.name= name;
-
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Integer getAge() {
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getAge() {
         return age;
-
     }
 
-    public void setAge(Integer age) {
-
+    public void setAge(int age) {
         this.age = age;
-
     }
 
 }

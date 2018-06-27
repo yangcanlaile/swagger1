@@ -1,6 +1,4 @@
 package com.test.springboot.controller;
-
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +18,6 @@ public class HomeController {
         System.out.printf("This is true3;");
 
         return "test12";
-
-
     }
 
    public void test3(){
