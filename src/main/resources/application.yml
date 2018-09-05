@@ -15,6 +15,53 @@ mybatis:
 server:
   port: 8082
 
+#数据库监控配置
+#management:
+#  health:
+#  #数据库监控配置
+#    db:
+#      enable: true
+#    defaults:
+#      enabled: true
+#  #应用磁盘空间检查配置
+#    diskspace:
+#      enabled: true
+#      path: D:\chellen work\Project\swagger2
+#      threshold: 0
+#  #ElasticSearch服务健康检查配置
+#    elasticsearch:
+#      enabled: true
+#      indices: index1,index2
+#      response-timeout: 100
+#  #Solr服务健康检查配置
+#    solr:
+#      enabled: true
+#  #JMS服务健康检查配置
+#    jms:
+#      enabled: true
+#  #Mail服务健康检查配置
+#    mail:
+#      enabled: true
+#  #MongoDB服务健康检查配置
+#    mongo:
+#      enabled: true
+#  #Rabbit MQ服务健康检查配置
+#    rabbit:
+#      enabled: true
+#  #Redis服务健康检查配置
+#    redis:
+#      enabled: true
+#    status:
+#      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
+
+
+
+
+
+
+
+
+
 
 #server:
 #  servlet:
