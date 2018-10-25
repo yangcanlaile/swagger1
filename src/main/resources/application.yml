@@ -9,6 +9,8 @@ spring:
   http:
     encoding:
       charset: utf-8
+  thymeleaf:
+      prefix: classpath:/templates/
 mybatis:
   type-aliases-package: com.test.springboot.mapper
   mapper-locations: classpath*:mapper/*Mapper.xml

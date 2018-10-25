@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
     @ApiOperation(value="登陆", notes="根据url的id来获取用户详细信息")
-    @RequestMapping(value= "/home", method=RequestMethod.GET)
+    @RequestMapping(value= "/home")
     public String login(){
 
         System.out.printf("This is true3;");
 
-        return "test12";
+        return "home";
     }
 
    public void test3(){
